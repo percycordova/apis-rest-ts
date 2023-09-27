@@ -10,8 +10,9 @@ Instalar las siguientes dependencias dentro del proyecto
 
 ```bash
   tsc --init
-  npm i express cors dotenv  multer  mongoose
-  npm i @types/express @types/cors @types/dotenv  @types/multer  @types/mongoose -D
+  npm i express cors dotenv  multer  mongoose bcryptjs jsonwebtoken
+  npm i @types/express @types/cors @types/dotenv  @types/multer  @types/mongoose @types/bcryptjs @types/jsonwebtoken -D
+
 ```
 
 ## Installation de dependecias globales

@@ -18,14 +18,14 @@ const getCar = async (id: string) => {
 
 const updateCar = async (id: string, data: Car) => {
   const responseItem = await ItemModel.findOneAndUpdate({ _id: id }, data, {
-    new: true,
+    new: true, // nos va a responder el objecto ya actualizado
   });
   return responseItem;
 };
 
-// const deleteCar = async (id: string) => {
-//   const responseItem = await ItemModel.remove({ _id: id });
-//   return responseItem;
-// };
+const deleteCar = async (id: string) => {
+  const responseItem = await ItemModel.deleteOne({ _id: id });
+  return responseItem;
+};
 
-export { insertCar, getCars, getCar, updateCar };
+export { insertCar, getCars, getCar, updateCar, deleteCar };
